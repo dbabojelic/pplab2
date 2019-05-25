@@ -1,0 +1,14 @@
+build:
+    mkdir build
+    cd build
+    cmake .
+    make
+
+run:
+    mpiexec -n <broj_proc> ./exe <SEARCH_DEPTH>
+
+
+Nekad se čini kao da računalo ne radi očito optimalne poteze.
+To je istina zato što kad on bira sljedeci potez ako ima vise pobjednickih
+pozicija on uzima bilo koju od tih pobjednickih a ne nužno onu koja dolazi
+do pobjede odmah (ili ranije).
